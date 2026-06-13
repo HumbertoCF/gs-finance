@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Arquivos de apoio (não fazem parte da entrega)
+task.md
+figma-dashboard.png
+docs-preview.png
+verify-desktop.png
+verify-mobile.png
+.playwright-cli/
