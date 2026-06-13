@@ -6,7 +6,8 @@ construída para a atividade da FIAP (Fase de HTML, CSS e Tailwind CSS).
 Recriação fiel da tela desenhada no Figma na Fase 2, com um acabamento visual mais polido,
 mantendo a mesma identidade (roxo/violeta, cards arredondados, sombras suaves).
 
-![Preview do dashboard](docs/preview-desktop.png)
+> **Tela:** Dashboard de gastos com sidebar, cards de resumo, lista de lançamentos,
+> limites por categoria e integração Open Finance — totalmente responsiva.
 
 ## ✨ Funcionalidades da tela
 
