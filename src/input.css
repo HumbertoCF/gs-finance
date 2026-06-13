@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Barra de progresso de limite por categoria */
+  .track {
+    @apply h-1.5 w-full overflow-hidden rounded-full bg-slate-100;
+  }
+}
