@@ -131,6 +131,12 @@ document.addEventListener('click', (e) => {
     return;
   }
 
+  const tab = e.target.closest('[data-tab]');
+  if (tab) {
+    selecionarTab(tab);
+    return;
+  }
+
   const sw = e.target.closest('[data-switch]');
   if (sw) {
     sw.setAttribute('aria-pressed', sw.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
@@ -155,7 +161,16 @@ document.addEventListener('click', (e) => {
   else if (action === 'toast-detalhes') showToast('Abrindo detalhes da meta…');
   else if (action === 'toast-editar') showToast('Modo de edição de limites');
   else if (action === 'toast-sair') showToast('Saindo da conta…');
+  else if (action === 'toast-periodo') showToast('Período: últimos 30 dias');
+  else if (action === 'toast-lang') showToast('Idioma: Português (BR)');
 });
+
+// Abas Status / Alertas
+function selecionarTab(btn) {
+  const key = btn.dataset.tab;
+  $$('[data-tab]').forEach((t) => t.classList.toggle('tab-on', t === btn));
+  $$('[data-tabpanel]').forEach((p) => p.classList.toggle('hidden', p.dataset.tabpanel !== key));
+}
 
 // Fecha modal ao clicar no fundo
 $('[data-modal]')?.addEventListener('click', (e) => {

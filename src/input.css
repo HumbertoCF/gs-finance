@@ -16,6 +16,21 @@
     @apply h-1.5 w-full overflow-hidden rounded-full bg-slate-100;
   }
 
+  /* Abas (Status / Alertas) */
+  .tab {
+    @apply relative pb-3 text-sm font-semibold text-muted transition;
+  }
+  .tab:hover {
+    @apply text-ink/80;
+  }
+  .tab.tab-on {
+    @apply text-ink;
+  }
+  .tab.tab-on::after {
+    content: '';
+    @apply absolute -bottom-px left-0 right-0 h-0.5 rounded-full bg-brand-gradient;
+  }
+
   /* Navegação lateral (desktop) */
   .nav-item {
     @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-ink/70 transition;
