@@ -5,6 +5,8 @@
 @layer base {
   body {
     @apply bg-canvas text-ink font-sans antialiased;
+    /* figuras financeiras com largura uniforme */
+    font-variant-numeric: tabular-nums;
   }
 }
 
