@@ -1,64 +1,40 @@
-# GS Finance — App de Finanças Pessoais 💸
+# GS Finance
 
-App de controle de gastos de uma fintech, construído para a atividade da FIAP
-(HTML, CSS e Tailwind CSS). Recriação das telas desenhadas no Figma (Fase 2),
-com acabamento visual mais polido e a mesma identidade (roxo/violeta, cards
-arredondados, sombras suaves).
+Projeto de front-end de uma fintech (controle de gastos pessoais), feito para a
+atividade da FIAP. As telas foram baseadas no protótipo do Figma da Fase 2 e
+montadas com HTML, CSS e Tailwind.
 
-> **Telas:** Dashboard, Extrato de gastos, Transferir (Pix) e Perfil — com
-> navegação por clique, totalmente responsivas (sidebar no desktop, bottom
-> navigation no mobile).
+## Telas
 
-## ✨ Funcionalidades
+- **Dashboard** — gráfico de entrada/saída, gastos por categoria, donut de limite e painel de alertas.
+- **Extrato** — lista de gastos com busca e filtro por categoria.
+- **Transferir** — formulário de Pix com contatos recentes.
+- **Perfil** — dados da conta e preferências.
 
-**Telas**
-- **Dashboard** — gráfico entrada/saída, gastos por categoria, donut de limite,
-  painel de alertas (abas Status/Alertas) e header com busca.
-- **Extrato** — lista de lançamentos com **busca** e **filtros por categoria**,
-  cards de resumo, limites por categoria e Open Finance.
-- **Transferir** — formulário de Pix com contatos recentes e validação.
-- **Perfil** — dados da conta e preferências com **switches** interativos.
+A navegação entre as telas é feita em JavaScript (sem recarregar a página). Tem
+também o modal de adicionar gasto, busca/filtro em tempo real e alguns toasts.
 
-**Interatividade (UX)**
-- Navegação entre telas sem recarregar a página.
-- Busca e filtros que atualizam a lista em tempo real.
-- Modal **Adicionar gasto** que insere o lançamento e recalcula o total.
-- Toasts de confirmação, toggles e estados de hover/ativo.
+## Como rodar
 
-## 🛠️ Tecnologias
-
-- **HTML5** semântico — `front/index.html`
-- **Tailwind CSS** — utilitários no markup + tema customizado
-- **CSS** separado em `front/css/styles.css` (saída compilada do Tailwind)
-- **JavaScript** (vanilla) — `front/js/app.js`
-- Fonte **Plus Jakarta Sans** e ícones **SVG** embutidos localmente (abre 100% offline)
-
-## ▶️ Como abrir
-
-Tudo já vem compilado e embutido. Basta abrir:
+É só abrir o arquivo no navegador:
 
 ```
 front/index.html
 ```
 
-Não precisa de internet, build, nem servidor — clicar duas vezes no `front/index.html` funciona.
+Não precisa de internet nem de servidor — o CSS já está compilado e a fonte e os
+ícones ficam junto do projeto.
 
-## 📁 Estrutura
+## Organização
 
 ```
-.
-├── front/                # ENTREGÁVEL — site que abre no navegador
-│   ├── index.html        # estrutura das telas (HTML)
-│   ├── css/styles.css     # estilos compilados do Tailwind (CSS)
-│   ├── js/app.js          # interatividade: navegação, filtros, modal, toasts
-│   └── fonts/             # Plus Jakarta Sans (woff2)
-└── README.md
+front/
+  index.html      # html das telas
+  css/styles.css  # css (build do tailwind)
+  js/app.js       # navegação, busca, filtros, modal
+  fonts/          # fonte usada no projeto
 ```
-
-> As ferramentas de build (Tailwind, configs) e arquivos de apoio ficam em `assets/`
-> (fora do versionamento). Para recompilar o CSS: `npm --prefix assets/build install`
-> e `npm --prefix assets/build run build`.
 
 ---
 
-Projeto desenvolvido por **Humberto Campos** · FIAP.
+Humberto Campos — FIAP.
