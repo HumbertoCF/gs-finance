@@ -1,25 +1,12 @@
+# Dependências
 node_modules/
 package-lock.json
 npm-debug.log*
 
-# Arquivos de apoio (não fazem parte da entrega)
-task.md
-figma-dashboard.png
-docs-preview.png
-verify-desktop.png
-verify-mobile.png
+# Apoio, ferramentas de build e screenshots (não entregável)
+assets/
 .playwright-cli/
 
-entrega-pdf.html
-gs-finance.zip
+# Documento de entrega (enviado à plataforma FIAP ON, fora do repositório)
 entrega.pdf
-test-flow.js
-v-*.png
-v2-*.png
-v3-*.png
-v4-*.png
-Home.png
-v5-*.png
-v6-*.png
-gf.css
-gitflow.png
+gs-finance.zip

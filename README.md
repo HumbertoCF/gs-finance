@@ -12,8 +12,8 @@ arredondados, sombras suaves).
 ## ✨ Funcionalidades
 
 **Telas**
-- **Dashboard** — saldo (com ocultar/mostrar), entradas/saídas, gráfico de
-  gastos por categoria (donut), ações rápidas e últimas transações.
+- **Dashboard** — gráfico entrada/saída, gastos por categoria, donut de limite,
+  painel de alertas (abas Status/Alertas) e header com busca.
 - **Extrato** — lista de lançamentos com **busca** e **filtros por categoria**,
   cards de resumo, limites por categoria e Open Finance.
 - **Transferir** — formulário de Pix com contatos recentes e validação.
@@ -27,42 +27,38 @@ arredondados, sombras suaves).
 
 ## 🛠️ Tecnologias
 
-- **HTML5** semântico — `index.html`
-- **Tailwind CSS** — utilitários no markup + tema customizado (`tailwind.config.js`)
-- **CSS** separado em `styles.css` (saída compilada do Tailwind)
-- **JavaScript** (vanilla) para interatividade — `app.js`
-- Ícones em **SVG inline** (sem dependência de imagens externas → abre offline)
+- **HTML5** semântico — `front/index.html`
+- **Tailwind CSS** — utilitários no markup + tema customizado
+- **CSS** separado em `front/css/styles.css` (saída compilada do Tailwind)
+- **JavaScript** (vanilla) — `front/js/app.js`
+- Fonte **Plus Jakarta Sans** e ícones **SVG** embutidos localmente (abre 100% offline)
 
 ## ▶️ Como abrir
 
-O CSS já vem compilado e o JS é um script clássico. Basta abrir:
+Tudo já vem compilado e embutido. Basta abrir:
 
 ```
-index.html
+front/index.html
 ```
 
-Não precisa de internet, build, nem servidor — clicar duas vezes no `index.html` funciona.
-
-## 🔧 Recompilar o Tailwind (opcional)
-
-```bash
-npm install
-npm run build      # gera styles.css minificado
-npm run dev        # modo watch durante o desenvolvimento
-```
+Não precisa de internet, build, nem servidor — clicar duas vezes no `front/index.html` funciona.
 
 ## 📁 Estrutura
 
 ```
 .
-├── index.html            # estrutura das telas (HTML)
-├── styles.css            # estilos compilados do Tailwind (CSS)
-├── app.js                # interatividade: navegação, filtros, modal, toasts
-├── src/input.css         # entrada do Tailwind (@tailwind + componentes)
-├── tailwind.config.js    # tema: cores da marca, sombras, gradientes
-└── package.json          # scripts de build
+├── front/                # ENTREGÁVEL — site que abre no navegador
+│   ├── index.html        # estrutura das telas (HTML)
+│   ├── css/styles.css     # estilos compilados do Tailwind (CSS)
+│   ├── js/app.js          # interatividade: navegação, filtros, modal, toasts
+│   └── fonts/             # Plus Jakarta Sans (woff2)
+└── README.md
 ```
+
+> As ferramentas de build (Tailwind, configs) e arquivos de apoio ficam em `assets/`
+> (fora do versionamento). Para recompilar o CSS: `npm --prefix assets/build install`
+> e `npm --prefix assets/build run build`.
 
 ---
 
-Projeto desenvolvido por **Humberto Campos** · FIAP · Front-end Design Engineering.
+Projeto desenvolvido por **Humberto Campos** · FIAP.
